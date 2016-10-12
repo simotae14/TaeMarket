@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20161012153305_add_user_id_to_contents.rb
