@@ -2,7 +2,7 @@ class Content < ActiveRecord::Base
   # stabilisco l'associazione con User
   belongs_to :user
   
-  has_attached_file :cover, styles: { medium: "300x>", thumb: "100x>" }
+  has_attached_file :cover
   validates_attachment_content_type :cover, content_type: /\Aimage\/.*\z/,
   message: "Solo le immagini sono supportate"
   
