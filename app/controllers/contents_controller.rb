@@ -51,7 +51,7 @@ class ContentsController < ApplicationController
     end
 
     def content_params
-      params.require(:content).permit(:titolo, :descrizione, :price)
+      params.require(:content).permit(:titolo, :descrizione, :price, :cover, :allegato)
     end
     
     def check_user
