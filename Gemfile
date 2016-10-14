@@ -14,6 +14,9 @@ gem 'materialize-sass'
 gem 'devise'
 gem "paperclip", "~> 5.0.0"
 
+gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate-materialize'
+
 group :development, :test do
   gem 'byebug'
 end
