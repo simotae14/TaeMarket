@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
          
   # definisco l'associazione has_many fra User e Content
   has_many :contents
+  
+  validates :name, presence: true
 end
