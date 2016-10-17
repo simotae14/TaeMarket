@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161014141259) do
+ActiveRecord::Schema.define(version: 20161017145406) do
 
   create_table "contents", force: :cascade do |t|
     t.string   "titolo"
@@ -48,12 +48,16 @@ ActiveRecord::Schema.define(version: 20161014141259) do
 
   create_table "sales", force: :cascade do |t|
     t.string   "email_acquirente"
-    t.string   "string"
     t.string   "email_venditore"
     t.string   "guid"
     t.integer  "content_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "state"
+    t.string   "stripe_id"
+    t.string   "stripe_token"
+    t.text     "error"
+    t.integer  "amount"
   end
 
   create_table "users", force: :cascade do |t|
