@@ -17,34 +17,7 @@ class ContentsController < ApplicationController
   def edit1
   end
 
-  def create
-    @content = current_user.contents.build(content_params)
-
-    respond_to do |format|
-      if @content.save
-        format.html { redirect_to @content, notice: 'Content was successfully created.' }
-      else
-        format.html { render :new }
-      end
-    end
-  end
-
-  def update
-    respond_to do |format|
-      if @content.update(content_params)
-        format.html { redirect_to @content, notice: 'Content was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
-    end
-  end
-
-  def destroy
-    @content.destroy
-    respond_to do |format|
-      format.html { redirect_to contents_url, notice: 'Content was successfully destroyed.' }
-    end
-  end
+  
 
   private
     def set_content
