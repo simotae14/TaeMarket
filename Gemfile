@@ -12,7 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'materialize-sass'
 gem 'devise'
-gem "paperclip", "~> 5.0.0"
+gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
 
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-materialize'
