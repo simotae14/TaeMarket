@@ -23,7 +23,7 @@ gem 'stripe'
 
 gem 'aasm'
 
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk', '< 2.0'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
