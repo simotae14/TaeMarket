@@ -4,6 +4,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
@@ -45,4 +46,15 @@ main {
 
 .pagination a li {
   padding: 0 10px;
+}
+
+.parallax {
+	text-align: center;
+	padding: 482px 0 30px 0;
+	background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.0)),
+						asset-data-url("background-7.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 }
