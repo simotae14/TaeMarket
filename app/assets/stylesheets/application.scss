@@ -98,6 +98,22 @@ main {
   margin-top: 5%;
 }
 
+a {
+  color: #D3BEC5;
+}
+
+a:hover {
+  color: #573C41;
+}
+
+.btn {
+  background-color: #573C41;
+}
+
+.btn:hover {
+  background-color: #D3BEC5;
+}
+
 @media (max-width: 600px){
   .fa-floppy-o {
     padding-top: 10px;
