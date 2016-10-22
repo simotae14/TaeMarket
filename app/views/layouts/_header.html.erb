@@ -1,17 +1,17 @@
 <header class="navbar-fixed">
-  <nav class="blue-grey darken-2">
+  <nav class="brown-mine">
     <div class="container nav-wrapper">
-      <%= link_to "TaeMarket", root_path, class: "brand-logo" %>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <%= link_to '<i class="fa fa-floppy-o"></i>&nbsp;TaeMarket'.html_safe, root_path, class: "brand-logo gray-mine-text" %>
+      <a href="#" data-activates="mobile-demo" class="button-collapse gray-mine-text"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li>
-          <%= link_to 'Vendi Contenuto', new_content_path %>
+          <%= link_to 'Vendi Contenuto', new_content_path, class: "gray-mine-text" %>
         </li>
         <% if user_signed_in? %>
-          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "gray-mine-text"  %></li>
         <% else %>
-          <li><%= link_to "Log In", new_user_session_path %></li>
-          <li><%= link_to "Registrazione", new_user_registration_path %></li>
+          <li><%= link_to "Log In", new_user_session_path, class: "gray-mine-text" %></li>
+          <li><%= link_to "Registrazione", new_user_registration_path, class: "gray-mine-text" %></li>
         <% end %>  
       </ul>
       <ul class="side-nav" id="mobile-demo">

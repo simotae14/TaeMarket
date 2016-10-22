@@ -1,4 +1,6 @@
 @import "materialize";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 body {
   display: flex;
@@ -8,11 +10,19 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 2em;
 }
 
 main {
   flex: 1 0 auto;
+}
+
+.home-subtitle {
+  margin: 5% 0;
 }
 
 .btn-devise {
@@ -57,4 +67,26 @@ main {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
+}
+
+.brown-mine {
+  background: #573C41 !important;
+}
+
+.gray-mine-text{
+    color: #D3BEC5 !important;
+}
+
+.brown-mine-text{
+    color: #573C41 !important;
+}
+
+.fa-social {
+  padding: 0 5%;
+}
+
+@media (max-width: 600px){
+  .fa-floppy-o {
+    padding-top: 10px;
+  }
 }

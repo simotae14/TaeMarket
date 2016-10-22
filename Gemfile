@@ -25,6 +25,8 @@ gem 'aasm'
 
 gem 'aws-sdk', '< 2.0'
 
+gem 'font-awesome-sass', '~> 4.6.2'
+
 gem 'dotenv-rails', :groups => [:development, :test]
 
 group :development, :test do
