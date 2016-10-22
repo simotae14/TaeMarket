@@ -50,6 +50,14 @@ main {
   width: 100%;
 }
 
+.btn {
+  background-color: #573C41;
+}
+
+.btn:hover {
+  background-color: #D3BEC5;
+}
+
 .card-image {
   height: 150px;
 }
@@ -105,13 +113,7 @@ a {
 a:hover {
   color: #573C41;
 }
-.btn {
-  background-color: #573C41;
-}
 
-.btn:hover {
-  background-color: #D3BEC5;
-}
 
 @media (max-width: 600px){
   .fa-floppy-o {
