@@ -1,0 +1,48 @@
+<h4><strong>Vendite</strong></h4>
+<table class="highlight responsive-table">
+  <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Prezzo</th>
+        <th>Data</th>
+        <th>Acquirente</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td><%= sale.content.titolo %></td>
+        <td><%= number_to_currency(sale.amount / 100) %></td>
+        <td><%= time_ago_in_words(sale.created_at)%> fa</td>
+        <td><%= sale.email_acquirente %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br><br>
+<h4><strong>Acquisti</strong></h4>
+<table class="highlight responsive-table">
+  <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Prezzo</th>
+        <th>Data</th>
+        <th>Venditore</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @purchased.each do |purchase| %>
+      <tr>
+        <td><%= link_to purchase.content.titolo, pickup_path(purchase.guid) %></td>
+        <td><%= number_to_currency(purchase.amount / 100) %></td>
+        <td><%= time_ago_in_words(purchase.created_at)%> fa</td>
+        <td><%= purchase.email_venditore %></td>
+      </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+      

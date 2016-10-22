@@ -8,7 +8,14 @@
           <%= link_to 'Vendi Contenuto', new_content_path, class: "gray-mine-text" %>
         </li>
         <% if user_signed_in? %>
-          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "gray-mine-text"  %></li>
+          <ul id="dropdown1" class="dropdown-content">
+            <li><%= link_to "Dashboard", dashboard_path %></li>
+            <li><%= link_to "Impostazioni", edit_user_registration_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete  %></li>
+          </ul>
+          <!-- Dropdown Trigger -->
+          <li><a class="dropdown-button gray-mine-text" href="#!" data-activates="dropdown1"><%= current_user.name %><i class="material-icons right">arrow_drop_down</i></a></li>
         <% else %>
           <li><%= link_to "Log In", new_user_session_path, class: "gray-mine-text" %></li>
           <li><%= link_to "Registrazione", new_user_registration_path, class: "gray-mine-text" %></li>
@@ -19,11 +26,14 @@
           <%= link_to 'Vendi Contenuto', new_content_path %>
         </li>
         <% if user_signed_in? %>
-          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "Dashboard", dashboard_path %></li>
+          <li><%= link_to "Impostazioni", edit_user_registration_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete  %></li>
         <% else %>
           <li><%= link_to "Log In", new_user_session_path %></li>
           <li><%= link_to "Registrazione", new_user_registration_path %></li>
-        <% end %> 
+        <% end %>  
       </ul>
     </div>
   </nav>

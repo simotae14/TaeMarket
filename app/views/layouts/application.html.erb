@@ -28,7 +28,13 @@
   
   <%= render "layouts/footer" %>
   <script>
+  $(document).ready(function(){
+    $('.parallax').parallax();
+    $('ul.tabs').tabs();
+    $(".dropdown-button").dropdown();
     $('.button-collapse').sideNav();
+  });
+    
   </script>
 </body>
 </html>

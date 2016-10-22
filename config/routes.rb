@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   post '/compra/:slug', to: 'transactions#create', as: :compra
   #pagina per il download del contenuto
   get '/pickup/:guid', to: 'transactions#pickup', as: :pickup
-
+  
+  get 'dashboard' => 'pages#dashboard'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

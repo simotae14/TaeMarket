@@ -1,0 +1,26 @@
+<table class="highlight responsive-table">
+  <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Prezzo</th>
+        <th>Data di creazione</th>
+        <th>Azioni</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contents.each do |content| %>
+      <tr>
+        <td><%= link_to content.titolo, content_path(content) %></td>
+        <td><%= number_to_currency(content.price) %></td>
+        <td><%= content.created_at.strftime("%d/%m/%Y alle %H:%M") %></td>
+        <td>
+          <%= link_to 'Modifica', edit_content_path(content) %> | 
+          <%= link_to 'Elimina', content, method: :delete, data: {confirm: 'Sei sicuro di eliminare questo contenuto?'} %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+      
