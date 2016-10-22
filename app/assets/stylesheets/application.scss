@@ -29,10 +29,6 @@ main {
   margin: 5% 0;
 }
 
-.content-show {
-  margin-top: 5%;
-}
-
 .btn-devise {
   width: 100%;
 }
@@ -96,6 +92,10 @@ main {
 .dropdown-content {
   min-width: 130px;
   text-align: center;
+}
+
+.content-show {
+  margin-top: 5%;
 }
 
 @media (max-width: 600px){
